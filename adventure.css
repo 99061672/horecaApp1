@@ -1,0 +1,116 @@
+body{
+	margin: 0;
+}
+
+.achtergrond-titel{
+	background-color: rgb(65,65,65);
+	height: max-content;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.titel{
+	background: rgba(0,0,0,0,5);
+	text-align: center;
+	color: white;
+	padding: 50px;
+	font-variant: small-caps;
+	font-size: 100px;
+	font-family: fantasy;
+	letter-spacing: 20px;
+}
+
+#menuJS{
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+
+.menu{
+	text-align: center;
+	background-color: rgb(44,44,44);
+}
+
+.menu-ul{
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+.menu-ul li{
+	font-size: 17px;
+	list-style: none;
+	display: inline-block;
+	padding: 25px 25px 26px 25px;
+}
+
+.a-menu{
+	text-decoration: none;
+	color: white;
+}
+
+.a-menu li:hover{
+	background-color: rgb(27,27,27);
+	transform:scale(1.1)
+}
+
+.zoeken-box{
+	border: 1px solid white;
+	border-radius: 50px;
+	background: white;
+	width: max-content;
+	display: inline-block;
+	margin: 8px;
+}
+
+.zoeken-box:hover{
+	box-shadow: 0 0 10px 2px rgb(27,27,27);
+	border: 1px solid;
+}
+
+.zoeken-input{
+	width: 205px;
+	border: none;
+	font-size: 16px;
+	outline: none;
+	background: transparent;
+	margin: 15px 0 0 15px;
+}
+
+i{
+	font-size: 15px;
+	margin: 0 10px 0 0;
+}
+
+button{
+	background: transparent;
+	border: none;
+	outline: none;
+}
+
+.container{
+	margin:0 auto;
+	width:90%;
+	text-align: center;
+}
+
+.categorie{
+	width: max-content;
+	margin: 25px;
+	border: 1px solid #000000;
+	border-radius: 0 0 50px 50px;
+	display: inline-block;
+}
+
+.categorie:hover{
+	box-shadow: 0 0 10px 3px #184d47; 
+}
+
+.foto-item{
+	height: 200px;
+	width: 200px;
+	border-radius: 0 0 50px 50px;
+	padding: 10px;
+}
