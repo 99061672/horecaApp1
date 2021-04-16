@@ -116,8 +116,8 @@ button{
 }
 
 .kassabon{
-	width: 300px;
-	height: 200px;
+	width: 400px;
+	height: 400px;
 	background-color: beige;
 	margin: auto;
 	border: 1px solid #000000;
@@ -125,7 +125,20 @@ button{
 }
 
 .aantal{
-	margin-top: 20px;
 	margin-left: 20px;
+	margin-bottom: 40px;
+	color: black;
+	padding-top: 10px
+}
+
+.h1kassa{
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+.aantalinhoud{
+	margin-bottom: 15px;
 }
 

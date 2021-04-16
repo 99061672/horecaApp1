@@ -26,6 +26,9 @@ function aids(){
              bitterbalprijsacht = prijs8 * bitterbalachtaantal;
              alert(bitterbalachtaantal + " schaal(en) toegevoegd aan bestelling.");
              console.log("BB8 " +bitterbalachtaantal)
+
+             document.getElementById("Kassabitterbal8").innerHTML = ("aantal bitterballen van 8: " +bitterbalachtaantal);
+
            }
       
        }else{}
@@ -37,6 +40,8 @@ function aids(){
             bitterbalprijszestien = prijs16 * bitterbalzestienaantal;
             alert(bitterbalzestienaantal + " Schaal(en) toegevoegd aan bestelling.");
             console.log("BB16 " +bitterbalzestienaantal)
+
+            document.getElementById("Kassabitterbal16").innerHTML = ("aantal bitterballen van 16: " +bitterbalzestienaantal);
            }
        }
 }
@@ -50,6 +55,8 @@ function neonazi(){
          frisprijs = prijsf * frisaantal;
          alert(frisaantal + " Fris aan bestelling toegevoegd.");
          console.log("fris " +frisaantal);
+
+        document.getElementById("KassaFris").innerHTML = ("aantal fris: " +frisaantal);
      }
 }
 
@@ -62,6 +69,8 @@ function tia(){
          bierprijs = prijsb * bieraantal;
          alert(bieraantal + " Bier aan bestelling toegevoegd.");
          console.log("bier " +bieraantal);
+
+         document.getElementById("KassaBier").innerHTML = ("aantal bier: " +bieraantal);
      }
 }
 
@@ -71,14 +80,11 @@ function hoer(){
          alert("Geen wijn toegevoegd.")
          wijnaantal = 0;
      }else{
-         wijnprijs = prijsw * wijn;
-         console.log(wijnprijs)
+         wijnprijs = prijsw * wijnaantal;
          alert(wijnaantal + " Wijn aan bestelling toegevoegd.");
-         console.log("wijn " +wijnaantal);
+         console.log("aantal wijn " +wijnaantal);
 
-         document.getElementById("wijn");
-         document.write("aantal wijn: " +wijnaantal);
-         document.write(+wijnprijs)
+         document.getElementById("KassaWijn").innerHTML = ("aantal wijn: " +wijnaantal);
      }
 }
 
