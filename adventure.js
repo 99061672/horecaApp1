@@ -1,192 +1,86 @@
-//Tyrell BLanken
+var frisaantal = 0;
+var bieraantal = 0;
+var wijnaantal = 0;
+var bitterbalachtaantal = 0;
+var bitterbalzestienaantal = 0;
+var totaalprijs;
+var bitterbalprijs;
+var frisprijs; 
+var wijnprijs;
+var bierprijs;
+var bitterbalprijsacht;
+var bitterbalprijszestien;
+const prijsf = 1.50;
+const prijsb = 2.25;
+const prijsw = 3;
+const prijs8 = 3;
+const prijs16 = 5;
 
+function aids(){
+	    var vraag2 = parseInt(prompt("Hoeveel bitterballen wilt u toevoegen (8 of 16)?"));
+        if(vraag2 == "8"){
+            bitterbalachtaantal = prompt("Hoeveel schalen van 8 bitterballen wilt u?");
+            if(bitterbalachtaantal == "0"){
+               alert("Geen bitterballen toegevoegd aan bestelling.");
+            }else{
+             bitterbalprijsacht = prijs8 * bitterbalachtaantal;
+             alert(bitterbalachtaantal + " schaal(en) toegevoegd aan bestelling.");
+             console.log("BB8 " +bitterbalachtaantal)
+           }
+      
+       }else{}
+       if(vraag2 == "16"){
+        bitterbalzestienaantal = parseInt(prompt("Hoeveel schalen van 16 bitterballen wilt u?"));
+           if(bitterbalzestienaantal == "0"){
+               alert("Geen bitterballen toegevoegd aan bestelling.");
+           }else{
+            bitterbalprijszestien = prijs16 * bitterbalzestienaantal;
+            alert(bitterbalzestienaantal + " Schaal(en) toegevoegd aan bestelling.");
+            console.log("BB16 " +bitterbalzestienaantal)
+           }
+       }
+}
 
-var buttonEen = document.getElementById("buttonEen");
-var buttonTwee = document.getElementById("buttonTwee");
-var buttonDrie = document.getElementById("buttonDrie");
-var achtergrond = document.getElementById("gamecontainer");
-var item = document.getElementById("inventoryItem")
-var inventory = 0;
+function neonazi(){
+    frisaantal = parseInt(prompt("Hoeveel fris wilt u?"));
+     if(frisaantal == "0"){
+         alert("Geen fris toegevoegd.");
+         frisaantal = 0;
+     }else{
+         frisprijs = prijsf * frisaantal;
+         alert(frisaantal + " Fris aan bestelling toegevoegd.");
+         console.log("fris " +frisaantal);
+     }
+}
 
-var inventoryitem = 0;
+function tia(){
+     bieraantal = parseInt(prompt("Hoeveel bier wilt u?"));
+     if(bieraantal == "0"){
+         alert("Geen bier toegevoegt");
+         bieraantal = 0;
+     }else{
+         bierprijs = prijsb * bieraantal;
+         alert(bieraantal + " Bier aan bestelling toegevoegd.");
+         console.log("bier " +bieraantal);
+     }
+}
 
-start();
+function hoer(){
+     wijnaantal = parseInt(prompt("Hoeveel wijn wilt u?"));
+     if(wijnaantal == "0"){
+         alert("Geen wijn toegevoegd.")
+         wijnaantal = 0;
+     }else{
+         wijnprijs = prijsw * wijn;
+         console.log(wijnprijs)
+         alert(wijnaantal + " Wijn aan bestelling toegevoegd.");
+         console.log("wijn " +wijnaantal);
 
-
-
-
-function start(){
-	document.getElementById("title").innerHTML = "Welkom bij de adventure Game";
-	document.getElementById("description").innerHTML = "Je krijgt straks verschillende keuzes. <br> Neem kies dan 1 van deze keuzes. <br> Je kunt ook dingen vinden. Op deze dingen kun je klikken. Ze kunnen je helpen tijdens je avontuur"
-	document.getElementById('buttonEen').innerHTML = "start";
-	buttonTwee.style.display = "none"
-	buttonDrie.style.display = "none"
-	buttonEen.onclick = beginnen;
-	bgstart();
-	item.style.display="none"
-	
-
-
+         document.getElementById("wijn");
+         document.write("aantal wijn: " +wijnaantal);
+         document.write(+wijnprijs)
+     }
 }
 
 
-function beginnen(){
-	document.getElementById("title").innerHTML = "bos";
-	document.getElementById("description").innerHTML = " <br> Je bent verdwaalt in een groot bos. Het wordt al wat later en je begint honger te krijgen <br> je telefoon is leeg en er zak een gat in je rugzak waardoor alles eruit gevallen is."
-	buttonEen.style.display = "none"
-	buttonTwee.style.display = "inline"
-	buttonDrie.style.display = "inline"
-	document.getElementById('buttonTwee').innerHTML = "links";
-	buttonTwee.onclick = links;
-	document.getElementById('buttonDrie').innerHTML = "rechts";
-	buttonDrie.onclick = rechts;
-	inventoryItem.style.display = "none"
-	bgstart();
-}
-
-
-function links(){
-	if (inventoryitem == "1") {
-		document.getElementById('title').innerHTML = "Linkerpad"
-		document.getElementById("description").innerHTML = "Het wordt al wat donkerder ga maar niet deze kant op"
-		document.getElementById("buttonEen").innerHTML = "Terug";
-		buttonEen.style.display = "inline"
-		buttonTwee.style.display = "none"
-		buttonDrie.style.display = "none"
-		bglinks();
-	}
-
-	else{
-
-	item.src = "images/otrommel.png"
-	document.getElementById('title').innerHTML = "Linkerpad"
-	document.getElementById("description").innerHTML = "Het wordt al wat donkerder ga maar niet deze kant op"
-	document.getElementById("buttonEen").innerHTML = "Terug";
-	buttonEen.style.display = "inline"
-	buttonTwee.style.display = "none"
-	buttonDrie.style.display = "none"
-	inventoryItem.style.display = "inline"
-	bglinks();
-	inventoryItem.onclick = function(){broodtrommel()};
-	}
-}
-
-
-
-function rechts(){
-	if (inventoryitem == "1") {
-		document.getElementById('title').innerHTML = "Nacht"
-		document.getElementById("description").innerHTML = "Het begint donker te worden, je ziet een plekje met mos. Je kan gaan slapen of verder op zoek gaan."
-		document.getElementById("buttonDrie").innerHTML = "Verdergaan";
-		document.getElementById('buttonTwee').innerHTML = "Slapen";
-		buttonEen.style.display = "none"
-		buttonTwee.style.display = "inline"
-		buttonDrie.style.display = "inline"
-		buttonTwee.onclick = slapen;
-		buttonDrie.onclick = verder;
-		bgnacht();
-	}
-	else {
-		document.getElementById('title').innerHTML = "Helaas"
-		document.getElementById("description").innerHTML = "Je had erge honger en bent omgekomen van de honger."
-		document.getElementById("buttonEen").innerHTML = "opnieuw";
-		bgtrommel();
-		inventoryItem.style.display = "none"
-		buttonEen.onclick = start
-		buttonEen.style.display = "inline"
-		buttonTwee.style.display = "none"
-		buttonDrie.style.display = "none"
-	}
-
-}
-
-function slapen(){
-	document.getElementById("title").innerHTML = "Goeie morgen"
-	document.getElementById("description").innerHTML = "Je wordt wakker van de langskomende wandelaars. Ze bellen de politie voor je en je wordt door de politie thuisgebracht."
-	buttonEen.style.display = "none"
-	buttonTwee.style.display = "none"
-	buttonDrie.style.display = "none"
-	ochtend();
-	inventoryItem.style.display = "none"
-}
-
-function verder(){
-	document.getElementById("title").innerHTML = "bosjes"
-	document.getElementById("description").innerHTML = "Je ziet de bosjes bewegen. Wat doe je?"
-	buttonEen.style.display = "inline"
-	buttonTwee.style.display = "inline"
-	buttonDrie.style.display = "none"
-	inventoryItem.style.display = "none"
-	buttonEen.onclick = dood
-	buttonTwee.onclick = einde
-	nachtbos();
-	document.getElementById("buttonEen").innerHTML = "wegrennen";
-	document.getElementById('buttonTwee').innerHTML = "kijken";
-}
-
-
-function dood(){
-	document.getElementById("title").innerHTML = "Dood"
-	document.getElementById("description").innerHTML = "Je voelt een steek in je rug, als je achteromkijkt zie je een oude man glimlachen. Dan wordt alles zwart."
-	zwart();
-	buttonEen.style.display = "none"
-	buttonTwee.style.display = "none"
-}
-
-function einde(){
-	document.getElementById("title").innerHTML = "Einde"
-	document.getElementById("description").innerHTML = "Je kijkt in de bosjes en ziet dat het je telefoon was. Je belt je moeder en kan de weg weer naar huis vinden."
-	telefoon();
-	buttonEen.style.display = "none"
-	buttonTwee.style.display = "none"
-}
-
-
-function broodtrommel(){
-	inventoryItem.style.display = "none"
-	inventoryitem = "1";
-	console.log(inventoryitem)
-
-}
-
-
-
-function bgtrommel(){
-	document.body.style.backgroundImage = "url('images/bostrommel.jpg')"
-}
-
-function bgstart(){
-	document.body.style.backgroundImage = "url('images/bos.jpg')"
-}
-
-function bglinks(){
-	document.body.style.backgroundImage = "url('images/bosachtuur.jpg')"
-}
-
-function bgnacht(){
-	document.body.style.backgroundImage = "url('images/bosdonker.png')"
-}
-
-
-function ochtend(){
-	document.body.style.backgroundImage = "url('images/ochtendbos.jpg'"
-}
-
-function nachtbos(){
-	document.body.style.backgroundImage = "url('images/bosbos.png')"
-}
-
-function telefoon(){
-	document.body.style.backgroundImage = "url('images/telefoon.jpg')"
-}
-
-function zwart(){
-	document.body.style.backgroundImage = "url('images/zwart.png')"
-}
-
-function wegrennen(){
-	document.getElementById("title").innerHTML = "Dood"
-	document.getElementById("description").innerHTML = "d"
-	
-}
 

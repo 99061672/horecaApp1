@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+   <link rel="stylesheet" type="text/css" href="adventure.css">
+   <script src="https://use.fontawesome.com/a912637ca4.js"></script>
+   <script src="adventure.js"></script>
+</head>
+  <body>
+      <div class="achtergrond-titel">
+          <div class="titel"> Route 88 </div>
+      </div>
+
+      <div class="menu" id="menuJS">
+            <ul class="menu-ul">
+                <a href="#" class="a-menu"><li>Home</li></a>
+                <a href="#" class="a-menu"><li>Fris</li></a>
+                <a href="#" class="a-menu"><li>Bier</li></a>
+                <a href="#" class="a-menu"><li>Wijn</li></a>
+                <a href="#" class="a-menu"><li>Snacks</li></a>
+            </ul>
+          <div class="zoeken-box">
+            <form>
+                <input type="text" placeholder="zoeken..." name="zoek" class="zoeken-input">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+      </div>
+
+
+      <div class="container">
+        
+              <div class="categorie">
+                  <img src="images/frisdranken.jpg" id="frisdrank" onclick="neonazi();" class="foto-item">
+                  <div class="foto-titel">Fris</div>
+              </div>
+
+              <div class="categorie">
+                  <img src="images/Bieren.jpg" id="bier" onclick="tia();" class="foto-item">
+                  <div class="foto-titel">Bier</div>
+              </div>
+
+              <div class="categorie">
+                  <img src="images/wijnen.jpg" id="wijn" onclick="hoer();" class="foto-item">
+                  <div class="foto-titel">Wijn</div>
+              </div>
+
+              <div class="categorie">
+                  <img src="images/bitterballen.jpg" id="bitterbal" onclick="aids();" class="foto-item">
+                  <div class="foto-titel">bitterballen</div>
+              </div>
+      </div>
+
+      <div class="kassabon">   
+          <div class="aantal">
+              <p class="aantalInhoud" id="KassaBier" id="KassaBierPrijs"></p>
+              <p class="aantalInhoud" id="KassaWijn id="KassaWijnPrijs"></p>
+              <p class="aantalInhoud" id="KassaFris" id="KassaFrisPrijs"></p>
+              <p class="aantalInhoud" id="Kassabitterbal8" id="Kassabitterbal8Prijs"></p>
+              <p class="aantalInhoud" id="Kassabitterbal16" id="Kassabitterbal16Prijs"></p>
+          </div>
+      </div>
+  </body>
+</html>
+
