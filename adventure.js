@@ -3,7 +3,7 @@ var bieraantal = 0;
 var wijnaantal = 0;
 var bitterbalachtaantal = 0;
 var bitterbalzestienaantal = 0;
-var totaalprijs;
+var totaalprijs = wijnprijs + bierprijs + frisprijs + bitterbalprijszestien + bitterbalprijsacht;
 var bitterbalprijs;
 var frisprijs; 
 var wijnprijs;
@@ -16,7 +16,8 @@ const prijsw = 3;
 const prijs8 = 3;
 const prijs16 = 5;
 
-function aids(){
+
+function Fbitterbal(){
 	    var vraag2 = parseInt(prompt("Hoeveel bitterballen wilt u toevoegen (8 of 16)?"));
         if(vraag2 == "8"){
             bitterbalachtaantal = prompt("Hoeveel schalen van 8 bitterballen wilt u?");
@@ -46,7 +47,7 @@ function aids(){
        }
 }
 
-function neonazi(){
+function Ffris(){
     frisaantal = parseInt(prompt("Hoeveel fris wilt u?"));
      if(frisaantal == "0"){
          alert("Geen fris toegevoegd.");
@@ -60,7 +61,7 @@ function neonazi(){
      }
 }
 
-function tia(){
+function Fbier(){
      bieraantal = parseInt(prompt("Hoeveel bier wilt u?"));
      if(bieraantal == "0"){
          alert("Geen bier toegevoegt");
@@ -74,7 +75,7 @@ function tia(){
      }
 }
 
-function hoer(){
+function Fwijn(){
      wijnaantal = parseInt(prompt("Hoeveel wijn wilt u?"));
      if(wijnaantal == "0"){
          alert("Geen wijn toegevoegd.")
@@ -88,5 +89,8 @@ function hoer(){
      }
 }
 
+function Totaalprijs(){
+    document.getElementById("Prijstotaal").innerHTML = ("totaalprijs: " +totaalprijs)
+}
 
-
+Totaalprijs();
