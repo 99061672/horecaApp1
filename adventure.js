@@ -16,6 +16,11 @@ const prijsw = 3;
 const prijs8 = 3;
 const prijs16 = 5;
 
+function Totaalprijs(){
+    document.getElementById("Prijstotaal").innerHTML = ("totaalprijs: " +totaalprijs);
+}
+
+Totaalprijs();
 
 function Fbitterbal(){
 	    var vraag2 = parseInt(prompt("Hoeveel bitterballen wilt u toevoegen (8 of 16)?"));
@@ -89,8 +94,13 @@ function Fwijn(){
      }
 }
 
-function Totaalprijs(){
-    document.getElementById("Prijstotaal").innerHTML = ("totaalprijs: " +totaalprijs)
-}
 
-Totaalprijs();
+function myFunction() {
+  var x = document.createElement("IMG");
+  x.setAttribute("src", "images/Nigger.jpg");
+  x.setAttribute("width", "304");
+  x.setAttribute("height", "228");
+  x.setAttribute("alt", "Nigger");
+  document.body.appendChild(x);
+  document.getElementById("Nigger".innerHTML = ("NIGGERSANDWICH")
+}
